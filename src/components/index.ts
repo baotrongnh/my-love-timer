@@ -1,4 +1,3 @@
-import AnimatedCard from "./AnimatedCard"
-import StaticCard from "./StaticCard"
+import FlipClock from "./FlipClock/FlipClock"
 
-export { AnimatedCard, StaticCard }
+export { FlipClock }

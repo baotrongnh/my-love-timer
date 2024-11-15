@@ -15,6 +15,7 @@ html {
 body {
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
+  background-color: #ffd1e0;
 }
 
 input:-webkit-autofill {

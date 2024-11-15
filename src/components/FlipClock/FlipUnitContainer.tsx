@@ -44,13 +44,13 @@ const FlipUnitContainer = ({ digit, shuffle, unit }: { digit: number, shuffle: b
           : 'unfold'
 
      return (
-          <div className={'flipUnitContainer'}>
+          <div className='flipUnitContainer'>
                <StaticCard
-                    position={'upperCard'}
+                    position='upperCard'
                     digit={currentDigit}
                />
                <StaticCard
-                    position={'lowerCard'}
+                    position='lowerCard'
                     digit={previousDigit}
                />
                <AnimatedCard
