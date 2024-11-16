@@ -22,7 +22,7 @@ function Header() {
                 </div>
 
                 <div className='flex gap-3 items-center'>
-                    <Menu shadow="md" width={120}>
+                    <Menu shadow="md" width={130}>
                         <Menu.Target>
                             <Tooltip label={t('change language')}>
                                 <Button leftSection={<Icon fontSize={20} icon="heroicons:language-20-solid"/>} rightSection={<Icon icon="mingcute:down-line" />}>
