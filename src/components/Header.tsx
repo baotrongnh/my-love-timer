@@ -45,17 +45,23 @@ function Header() {
                             </Menu.Item>
 
                             <Menu.Item value='js' onClick={handleSelectLanguage}
-                                       leftSection={<Icon icon="twemoji:flag-japan"/>}>
+                                       leftSection={<Icon icon="twemoji:flag-japan"/>}
+                                       disabled
+                            >
                                 日本語
                             </Menu.Item>
 
                             <Menu.Item value='zh' onClick={handleSelectLanguage}
-                                       leftSection={<Icon icon="twemoji:flag-china"/>}>
+                                       leftSection={<Icon icon="twemoji:flag-china"/>}
+                                       disabled
+                            >
                                 中國人
                             </Menu.Item>
 
                             <Menu.Item value='ko' onClick={handleSelectLanguage}
-                                       leftSection={<Icon icon="twemoji:flag-south-korea"/>}>
+                                       leftSection={<Icon icon="twemoji:flag-south-korea"/>}
+                                       disabled
+                            >
                                 한국인
                             </Menu.Item>
 
