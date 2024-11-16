@@ -19,6 +19,9 @@ export default {
           800: '#c00043',
           900: '#a90039',
         }
+      },
+      container: {
+        center: true
       }
     },
   },

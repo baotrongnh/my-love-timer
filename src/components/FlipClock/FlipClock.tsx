@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from "react"
 import FlipUnitContainer from "./FlipUnitContainer"
 
 const FlipClock = ({time}: { time: string }) => {
+    const [isFirstTime, setIsFirstTime] = useState(true)
     const [hoursShuffle, setHoursShuffle] = useState<boolean>(true)
     const [minutesShuffle, setMinutesShuffle] = useState<boolean>(true)
     const [secondsShuffle, setSecondsShuffle] = useState<boolean>(true)
@@ -24,6 +25,10 @@ const FlipClock = ({time}: { time: string }) => {
             const newHours = Math.floor((durationInSeconds % (24 * 60 * 60)) / (60 * 60))
             const newDays = Math.floor(durationInSeconds / (24 * 60 * 60))
 
+            if (newSeconds === 0) {
+                setIsFirstTime(false)
+            }
+
             if (newSeconds !== seconds) {
                 setSeconds(newSeconds)
                 setSecondsShuffle((prevShuffle) => !prevShuffle)
@@ -43,38 +48,34 @@ const FlipClock = ({time}: { time: string }) => {
                 setDays(newDays)
                 setDaysShuffle((prevShuffle) => !prevShuffle)
             }
-
-            console.log(newMinutes)
-            console.log(minutes)
-            console.log(seconds)
         }, 1000)
 
         return () => clearInterval(intervalRef.current)
-    }, [seconds, minutes, hours, days])
+    }, [seconds, minutes, hours, days, time])
+    console.log(seconds === 0 && isFirstTime)
+    if (seconds === 0 && isFirstTime) {
+        return <h1>Loading</h1>
+    }
 
     return (
-        <div>
-            <h1 className='text-center text-2xl font-semibold text-pink-700 mb-3'>We have been together for</h1>
+        <div className='flex gap-3 justify-center'>
+            <div className="text-center">
+                <FlipUnitContainer unit='day' digit={days} shuffle={daysShuffle}/>
+                <p className="text-pink-500 text-sm mt-3">DAYS</p>
+            </div>
 
-            <div className='flex gap-3 justify-center'>
-                <div className="text-center">
-                    <FlipUnitContainer unit='day' digit={days} shuffle={daysShuffle}/>
-                    <p className="text-pink-500 text-sm mt-3">DAYS</p>
-                </div>
+            <div className="text-center">
+                <FlipUnitContainer unit='hours' digit={hours} shuffle={hoursShuffle}/>
+                <p className="text-pink-500 text-sm mt-3">HOURS</p>
+            </div>
 
-                <div className="text-center">
-                    <FlipUnitContainer unit='hours' digit={hours} shuffle={hoursShuffle}/>
-                    <p className="text-pink-500 text-sm mt-3">HOURS</p>
-                </div>
-
-                <div className="text-center">
-                    <FlipUnitContainer unit='minutes' digit={minutes} shuffle={minutesShuffle}/>
-                    <p className="text-pink-500 text-sm mt-3">MINUTES</p>
-                </div>
-                <div className="text-center">
-                    <FlipUnitContainer unit='seconds' digit={seconds} shuffle={secondsShuffle}/>
-                    <p className="text-pink-500 text-sm mt-3">SECONDS</p>
-                </div>
+            <div className="text-center">
+                <FlipUnitContainer unit='minutes' digit={minutes} shuffle={minutesShuffle}/>
+                <p className="text-pink-500 text-sm mt-3">MINUTES</p>
+            </div>
+            <div className="text-center">
+                <FlipUnitContainer unit='seconds' digit={seconds} shuffle={secondsShuffle}/>
+                <p className="text-pink-500 text-sm mt-3">SECONDS</p>
             </div>
         </div>
     )

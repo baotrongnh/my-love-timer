@@ -15,7 +15,7 @@ html {
 body {
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-color: #ffd1e0;
+  background-color: #ffe9f2;
 }
 
 input:-webkit-autofill {
@@ -30,16 +30,16 @@ input:-webkit-autofill {
 }
 
 ::-webkit-scrollbar-track {
-  background: #4b4b4b;
+  background: #ffe9f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #f66e99;
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #ff4180;
 }
