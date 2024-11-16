@@ -1,8 +1,10 @@
 import dayjs from "dayjs"
 import {useEffect, useRef, useState} from "react"
 import FlipUnitContainer from "./FlipUnitContainer"
+import {useTranslation} from "react-i18next";
 
 const FlipClock = ({time}: { time: string }) => {
+    const {t} = useTranslation()
     const [isFirstTime, setIsFirstTime] = useState(true)
     const [hoursShuffle, setHoursShuffle] = useState<boolean>(true)
     const [minutesShuffle, setMinutesShuffle] = useState<boolean>(true)
@@ -52,7 +54,7 @@ const FlipClock = ({time}: { time: string }) => {
 
         return () => clearInterval(intervalRef.current)
     }, [seconds, minutes, hours, days, time])
-    console.log(seconds === 0 && isFirstTime)
+
     if (seconds === 0 && isFirstTime) {
         return <h1>Loading</h1>
     }
@@ -61,21 +63,21 @@ const FlipClock = ({time}: { time: string }) => {
         <div className='flex gap-3 justify-center'>
             <div className="text-center">
                 <FlipUnitContainer unit='day' digit={days} shuffle={daysShuffle}/>
-                <p className="text-pink-500 text-sm mt-3">DAYS</p>
+                <p className="text-pink-500 text-sm mt-3">{t('days')}</p>
             </div>
 
             <div className="text-center">
                 <FlipUnitContainer unit='hours' digit={hours} shuffle={hoursShuffle}/>
-                <p className="text-pink-500 text-sm mt-3">HOURS</p>
+                <p className="text-pink-500 text-sm mt-3">{t('hours')}</p>
             </div>
 
             <div className="text-center">
                 <FlipUnitContainer unit='minutes' digit={minutes} shuffle={minutesShuffle}/>
-                <p className="text-pink-500 text-sm mt-3">MINUTES</p>
+                <p className="text-pink-500 text-sm mt-3">{t('minutes')}</p>
             </div>
             <div className="text-center">
                 <FlipUnitContainer unit='seconds' digit={seconds} shuffle={secondsShuffle}/>
-                <p className="text-pink-500 text-sm mt-3">SECONDS</p>
+                <p className="text-pink-500 text-sm mt-3">{t('seconds')}</p>
             </div>
         </div>
     )

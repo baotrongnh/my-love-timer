@@ -4,6 +4,7 @@ import '@mantine/core/styles.css'
 import {theme} from './theme'
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import CountTime from "./pages/CountTime.tsx"
+import MainLayout from "./layouts/MainLayout.tsx";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
                 }}
             >
                 <Routes>
-                    <Route path="/" element={<CountTime/>}/>
+                    <Route path="/" element={<MainLayout><CountTime/></MainLayout>}/>
                 </Routes>
             </Router>
         </MantineProvider>

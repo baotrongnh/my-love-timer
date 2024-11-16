@@ -14,14 +14,16 @@ export default function CountTime() {
                 <FlipClock time='2023-9-13'/>
             </div>
 
-            <div className='container pt-72 fixed bottom-5'>
-                <AudioPlayer
-                    autoPlay={true}
-                    src={music}
-                    loop={true}
-                    showDownloadProgress={true}
-                    className='bg-pink-50 shadow-none mt-6'
-                />
+            <div className='fixed bottom-5 w-full px-2.5 md:px-8'>
+                <div className='container'>
+                    <AudioPlayer
+                        autoPlay={true}
+                        src={music}
+                        loop={true}
+                        showDownloadProgress={true}
+                        className='bg-transparent shadow-none backdrop-brightness-90 mt-6 rounded-2xl'
+                    />
+                </div>
             </div>
         </div>
     )

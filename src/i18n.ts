@@ -10,6 +10,8 @@ const resources = {
             'seconds': 'SECONDS',
 
             'we have been together for': 'We have been together for',
+
+            'languages': 'Languages'
         }
     },
     vi: {
@@ -20,7 +22,9 @@ const resources = {
             'seconds': 'GIÂY',
 
             'we have been together for': 'Chúng tôi đã bên nhau được',
-        }
+
+            'languages': 'Ngôn ngữ'
+        },
     }
 }
 

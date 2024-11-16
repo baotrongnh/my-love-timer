@@ -15,7 +15,21 @@ html {
 body {
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-color: #ffe9f2;
+  background: linear-gradient(-45deg, #ffe9f2, rgba(248, 175, 198, 0.91), #ffa8d2, #ffd1e0);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 input:-webkit-autofill {
