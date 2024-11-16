@@ -21,11 +21,11 @@ function Header() {
                     <Icon className='text-pink-600 text-5xl' icon="mingcute:love-fill"/>
                 </div>
 
-                <div>
+                <div className='flex gap-3 items-center'>
                     <Menu shadow="md" width={120}>
                         <Menu.Target>
                             <Tooltip label={t('change language')}>
-                                <Button leftSection={<Icon fontSize={20} icon="heroicons:language-20-solid"/>}>
+                                <Button leftSection={<Icon fontSize={20} icon="heroicons:language-20-solid"/>} rightSection={<Icon icon="mingcute:down-line" />}>
                                     <span className='pt-0.5'>{currentLanguage}</span>
                                 </Button>
                             </Tooltip>
@@ -41,7 +41,7 @@ function Header() {
 
                             <Menu.Item value='vi' onClick={handleSelectLanguage}
                                        leftSection={<Icon icon="twemoji:flag-vietnam"/>}>
-                                Việt Nam
+                                Tiếng Việt
                             </Menu.Item>
 
                             <Menu.Item value='js' onClick={handleSelectLanguage}
@@ -64,7 +64,6 @@ function Header() {
                             >
                                 한국인
                             </Menu.Item>
-
                         </Menu.Dropdown>
                     </Menu>
                 </div>

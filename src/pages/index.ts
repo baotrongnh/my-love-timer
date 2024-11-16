@@ -1,3 +1,3 @@
-import CountTime from "./CountTime.tsx"
+import CountTime from "./CountTime"
 
 export {CountTime}

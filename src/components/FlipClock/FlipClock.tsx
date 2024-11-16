@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
-import {useEffect, useRef, useState} from "react"
+import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
 import FlipUnitContainer from "./FlipUnitContainer"
-import {useTranslation} from "react-i18next";
 
 const FlipClock = ({time}: { time: string }) => {
     const {t} = useTranslation()
@@ -56,7 +56,7 @@ const FlipClock = ({time}: { time: string }) => {
     }, [seconds, minutes, hours, days, time])
 
     if (seconds === 0 && isFirstTime) {
-        return <h1>Loading</h1>
+        return <h1>loading...</h1>
     }
 
     return (
