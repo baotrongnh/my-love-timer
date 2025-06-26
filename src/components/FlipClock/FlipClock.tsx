@@ -62,7 +62,7 @@ const FlipClock = ({time}: { time: string }) => {
     return (
         <div className='flex gap-3 justify-center'>
             <div className="text-center">
-                <FlipUnitContainer unit='day' digit={days} shuffle={daysShuffle}/>
+                <FlipUnitContainer unit='day' digit={639} shuffle={daysShuffle}/>
                 <p className="text-pink-500 text-sm mt-3">{t('days')}</p>
             </div>
 
@@ -76,7 +76,7 @@ const FlipClock = ({time}: { time: string }) => {
                 <p className="text-pink-500 text-sm mt-3">{t('minutes')}</p>
             </div>
             <div className="text-center">
-                <FlipUnitContainer unit='seconds' digit={seconds} shuffle={secondsShuffle}/>
+                <FlipUnitContainer unit='seconds' digit={45} shuffle={45}/>
                 <p className="text-pink-500 text-sm mt-3">{t('seconds')}</p>
             </div>
         </div>

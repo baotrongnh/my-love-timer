@@ -9,7 +9,7 @@ const resources = {
             'minutes': 'MINUTES',
             'seconds': 'SECONDS',
 
-            'we have been together for': 'We have been together for',
+            'we have been together for': 'We used to be together',
 
             'languages': 'Languages'
         }
@@ -21,7 +21,7 @@ const resources = {
             'minutes': 'PHÚT',
             'seconds': 'GIÂY',
 
-            'we have been together for': 'Chúng tôi đã bên nhau được',
+            'we have been together for': 'Chúng tôi đã từng bên nhau được',
 
             'languages': 'Ngôn ngữ'
         },

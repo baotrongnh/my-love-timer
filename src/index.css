@@ -15,7 +15,7 @@ html {
 body {
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background: linear-gradient(-45deg, #ffe9f2, rgba(248, 175, 198, 0.91), #ffa8d2, #ffd1e0);
+  background: linear-gradient(-45deg,rgb(58, 58, 58), rgba(22, 22, 22, 0.91),rgb(0, 0, 0),rgb(66, 64, 65));
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
 }
