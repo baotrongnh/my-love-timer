@@ -2,7 +2,7 @@ import FlipClock from "../components/FlipClock/FlipClock.tsx"
 import {useTranslation} from "react-i18next"
 import AudioPlayer from 'react-h5-audio-player'
 import 'react-h5-audio-player/lib/styles.css'
-import music from '../assets/audio/Die With A Smile - Bruno Mars & Lady Gaga (Piano Cover by Riyandi Kusuma).mp3'
+import music from '../assets/audio/Intro (Mong Em Hạnh Phúc Suốt Cuộc Đời Này)  buitruonglinh.mp3'
 
 export default function CountTime() {
     const {t} = useTranslation()

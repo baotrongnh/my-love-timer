@@ -8,6 +8,7 @@ const FlipClock = ({time}: { time: string }) => {
     const [isFirstTime, setIsFirstTime] = useState(true)
     const [hoursShuffle, setHoursShuffle] = useState<boolean>(true)
     const [minutesShuffle, setMinutesShuffle] = useState<boolean>(true)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [secondsShuffle, setSecondsShuffle] = useState<boolean>(true)
     const [daysShuffle, setDaysShuffle] = useState<boolean>(true)
 
@@ -76,7 +77,7 @@ const FlipClock = ({time}: { time: string }) => {
                 <p className="text-pink-500 text-sm mt-3">{t('minutes')}</p>
             </div>
             <div className="text-center">
-                <FlipUnitContainer unit='seconds' digit={45} shuffle={45}/>
+                <FlipUnitContainer unit='seconds' digit={45} shuffle={false}/>
                 <p className="text-pink-500 text-sm mt-3">{t('seconds')}</p>
             </div>
         </div>
